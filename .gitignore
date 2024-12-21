@@ -1,0 +1,20 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+dist/
+build/
+*.egg-info/
+venv/
+env/
+.venv/
+.env/
+.idea/
+.ipynb_checkpoints/
+.vscode/
+# mypy, Pyre type checker
+.mypy_cache/
+.pyre/
+# pytest cache
+.cache/
+# pytype
+.pytype/
