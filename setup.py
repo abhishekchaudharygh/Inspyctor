@@ -1,25 +1,28 @@
-# setup.py
 from setuptools import setup, find_packages
 
 setup(
-    name="inspyctor",
-    version="0.1.0",
-    author="Abhishek Chaudhary",
-    author_email="abhishekchaudhary1403@gmail.com",
-    description="A Python package for code review using AI models and static analysis.",
-    long_description=open("README.md").read(),
-    long_description_content_type="text/markdown",
+    name='inspyctor',
+    version='0.1.0',
     packages=find_packages(),
     install_requires=[
-        "transformers",
-        "torch",
-        "flake8",
-        "bandit",
+        'flake8',
+        'bandit',
     ],
     entry_points={
-        "console_scripts": [
-            "inspyctor=inspyctor:review_code",
+        'console_scripts': [
+            'inspyctor = inspyctor.cli:main',
         ],
     },
-    python_requires=">=3.7",
+    description='Command-line tool to review Python code for style and security.',
+    long_description=open('README.md').read(),
+    long_description_content_type='text/markdown',
+    author='Abhishek Chaudhary',
+    author_email='abhishekchaudhary1403@gmail.com',
+    url='https://github.com/abhishekchaudharygh/inspyctor',
+    classifiers=[
+        'Programming Language :: Python :: 3',
+        'License :: OSI Approved :: MIT License',
+        'Programming Language :: Python :: 3.8',
+    ],
+    python_requires='>=3.6',
 )
